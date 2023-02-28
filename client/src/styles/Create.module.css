@@ -1,0 +1,158 @@
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.wrap h4 {
+    color: #ffde00;
+
+}
+.wrap label{
+    color: #ffde00;
+}
+.tp{
+    display: flex;
+    align-items: center;
+
+
+}
+.tp h1{
+display: block;
+}
+.tp button{
+    display: flex;
+    margin-right: 30px;
+    font-size: 16px;
+    text-align: center ;
+    background: #ffde00;
+    color: #3b4cca;
+    border: 3px solid #b3a125;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.colum1 {
+    display: flex;
+    flex-direction: column;
+}
+.colum1 input{
+    cursor: pointer;
+}
+.colum2{
+    display: flex;
+    flex-direction:  column;
+    margin-bottom: 33px;
+    margin-left: 30px;
+
+margin-right: 40px;
+}
+.rows {
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.box label {
+    margin-right: 9px;
+}
+.box input{
+    margin: 9px;
+    border: 1px solid #fe0000;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    display: flex;
+    flex-direction: column;
+}
+.hp{
+    display: flex;
+    align-items: center;
+    color:#181818
+}
+.hp label{
+    background: #cc0000;
+    color:#181818;
+    border-radius: 3px;
+}
+.attack{
+    display: flex;
+    align-items: center;
+    color:#181818;
+}
+.attack label{
+    background: #f08030 ;
+    color:#181818;
+    border-radius: 3px;
+}
+.dfs{
+    display: flex;
+    align-items: center;
+    color:#181818;
+}
+.dfs label{
+    background: #6890f0;
+    color:#181818;
+    border-radius: 3px;
+}
+.speed{
+    display: flex;
+    align-items: center;
+    color:#181818;
+}
+.speed label{
+    background: #f65b8a;
+    color:#181818;
+    border-radius: 3px;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    width: 66px;
+}
+.renderTypes{
+    display: flex;
+    width: 160px;
+    height: 99px;
+    flex-flow: row wrap;
+}.renderTypes span { 
+
+    color:#ffde00;
+    font-size: 16px;
+}
+.renderTypes button {
+    display: flex;
+    color:#ffde00;
+    background: #cc0000;
+    width: 20px;
+    height: 20px;
+    border-radius:3px;
+    font-size:12px;
+    text-align: center;
+}
+.type{
+    display: flex;
+    flex-flow: wrap row;;
+}
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit button{
+    background: #cc0000;
+    border-radius: 9px;
+    width: 90px;
+    color: #ffde00;
+}
+.error{
+    color:#ffde00;
+    font-size: 18px;
+    margin:15px;
+
+}

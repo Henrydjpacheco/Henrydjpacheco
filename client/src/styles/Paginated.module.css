@@ -1,0 +1,22 @@
+.paginated{
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    border-radius: 30px;
+}
+li{
+    background-color:#cc0000;
+    margin-left:6px;
+    padding: 6px;
+    border: 1px solid #3b4cca ;
+    color:#ffde00;
+    cursor: pointer;
+    list-style: none;
+    
+}
+li:hover{
+    
+    background-color:#FF0000;
+    color:#ffde00;
+    box-shadow: 0px 0px 30px #00ff;
+}

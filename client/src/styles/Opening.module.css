@@ -1,0 +1,14 @@
+.open{
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.open img{
+    margin-top: 81px;
+    width: 690px;
+    height: 455px;
+    align-items: center;
+    border: 33px solid #cc0000;
+    border-radius: 15px ;
+}

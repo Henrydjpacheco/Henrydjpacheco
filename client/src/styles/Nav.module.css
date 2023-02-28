@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: row; 
+    margin-right: 15px;
+    margin-top: 35px;
+    
+}
+.container button{
+    background: #cc0000;
+    border-radius: 9px;
+    border: 1px solid #3b4cca;
+    width: auto;
+    height: 25px;
+    color: #ffde00; 
+    font-size: 12px;
+    font-family: 'inter';
+    text-align: center;
+    margin-left: 9px;
+    cursor: pointer;
+
+}

@@ -1,0 +1,41 @@
+.card{
+    padding: 30px;
+    
+}
+.description{
+    font-family: 'Bahnschrift', sans-serif;
+    margin:0;   
+}
+.description p{
+    color: #ffde00;
+    display:flex;
+    flex-flow: row wrap;
+    font-size: 22px;
+    text-justify: inter-cluster;
+    margin-bottom: 0;
+}
+.description h6{
+    color: #3b4cca;
+    text-shadow: 0px 0px 15px #0000;
+    text-align: start;
+    margin: 0;
+}
+.to{
+    text-decoration: none;
+}
+a{
+
+    text-decoration: none;
+    font-size:27px;
+   /*  text-shadow: 0px 0px 18px #000000; */
+}
+.banner {
+    
+    width: 100px;
+    height:  100px;
+    filter: drop-shadow(0px 4px 9px #FFFFFF);
+
+}
+.banner:hover{
+    transform: scale(1.3);
+}

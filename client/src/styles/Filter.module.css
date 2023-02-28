@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ffde00;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+}
+.container select {
+    color: #ffde00;
+}

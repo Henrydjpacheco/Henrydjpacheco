@@ -1,0 +1,21 @@
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cont img{
+    margin-top: 81px;
+    width: 690px;
+    height: 455px;
+    align-items: center;
+    border: 33px solid #cc0000;
+    border-radius: 15px ;
+}
+
+.init{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vmin; 
+}
