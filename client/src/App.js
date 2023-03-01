@@ -6,7 +6,7 @@ import Home from './components/Home.jsx';
 import Detail from './components/Detail.jsx';
 import Create from './components/Create.jsx'; 
 import Opening from './components/Opening.jsx';
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://pokedex-app-production-2c3a.up.railway.app";
 
 function App() {
   return (
