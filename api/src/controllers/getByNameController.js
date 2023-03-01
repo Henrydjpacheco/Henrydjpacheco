@@ -26,7 +26,7 @@ const findByName = async name => {
             CreatedInDb: pokemon.createdInDb
         }
         
-        if(pokemon) return pokeDb;
+        if(pokeDb) return pokeDb;
             const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const poke = {
                 id: data.id,
