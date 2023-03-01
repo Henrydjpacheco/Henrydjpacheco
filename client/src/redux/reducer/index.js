@@ -1,4 +1,4 @@
-import {  GET_DETAIL, GET_BY_NAME, GET_TYPES,POST_POKEMON, FILTER_BY_TYPE, FILTER_BY_DATA_UBICATION, SORT_BY_NAME, SORT_BY_ATTACK } from '../actions';
+import {  GET_DETAIL, GET_BY_NAME, GET_TYPES,POST_POKEMON, FILTER_BY_TYPE, FILTER_BY_DATA_UBICATION, SORT_BY_NAME, SORT_BY_ATTACK, CLEAR } from '../actions';
 import { GET_ALL_POKEMON } from '../actions';
 const initialState = {
     pokemon: [],
@@ -6,6 +6,7 @@ const initialState = {
     types: [],
     detail: []
 };
+
 const rootReducer = ( state = initialState, action) => {
     switch (action.type) {
         case GET_ALL_POKEMON:
@@ -18,7 +19,6 @@ const rootReducer = ( state = initialState, action) => {
         case GET_BY_NAME: 
         return {
             ...state,
-            
             pokemon: action.payload
         }
 
@@ -86,6 +86,11 @@ const rootReducer = ( state = initialState, action) => {
                 ...state,
                 pokemon : sortAttack
             };
+        case CLEAR:
+            return {
+                ...state,
+                detail: []
+            }
 
         default: return state;
     };

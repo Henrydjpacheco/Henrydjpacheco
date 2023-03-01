@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { getByName } from "../redux/actions";
 import style from '../styles/SearchBar.module.css'
 
-const SearchBar = () =>{
+const SearchBar = ({setCurrentPage}) =>{
     const dispatch = useDispatch();
     let [name, setName] = useState('');
     
@@ -18,15 +18,18 @@ const SearchBar = () =>{
         event.preventDefault();
         if (name.length !== 0) {
             dispatch(getByName(name));
-            setName('')
+            dispatch(setCurrentPage(1));
+            
         } else {
-            alert("Debes ingresar el nobre exacto del pokemon");
+            setName('')
+            alert("You must enter the exact name of the pokemon");
+            
         }
     };
 
     return(
         <div className={style.search}>
-            <input onChange={handleInputChange} value={name} type='search'placeholder="  Search Pokemon..." name='search'/>
+            <input onChange={handleInputChange} value={name} type='search'placeholder="Search Pokemon..." name='search'/>
             <button  type='submit' onClick={e =>handleSubmit(e)}>Search</button>
         </div>
     );

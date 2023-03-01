@@ -2,7 +2,7 @@ import React from 'react';
 
 import style from '../styles/Paginated.module.css';
 
-const Paginated = ({pokemonPerPage, allPokemon, paginated}) =>{
+const Paginated = ({pokemonPerPage, allPokemon, paginated, currentPage}) =>{
     
     const pageNumber = []
 
@@ -14,8 +14,8 @@ const Paginated = ({pokemonPerPage, allPokemon, paginated}) =>{
         <nav>
             <ul className={style.paginated}>
                 {pageNumber && pageNumber.map( num =>(
-                    <li  className={style.number} key={num}>
-                        <a key={num}onClick={() => paginated( num )}>{num}</a>
+                    <li  className={ num == currentPage ?  style.focus : style.number } key={num}>
+                        <a key={num}onClick={() => paginated(num)} >{num}</a>
                     </li>
                 ))}
             </ul>

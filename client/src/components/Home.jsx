@@ -57,12 +57,12 @@ const Home = () => {
             <h1>Pokedex<br/></h1>
             <div className={style.top}>
                 <div className={style.search}>
-                <SearchBar/> 
+                <SearchBar setCurrentPage={setCurrentPage}/> 
                 <Nav handleClick={handleClick}/> 
             </div>       
             <div className={style.contNav}>
                 <div className={style.order}>
-                    <FilterBy refresh={refresh}/> 
+                    <FilterBy setCurrentPage={setCurrentPage} refresh={refresh}/> 
                     <div className={style.sort}>
                         <p>Sort By:</p>
                             <div>
@@ -91,7 +91,7 @@ const Home = () => {
                     )
                 }
             </div>
-            <Paginated pokemonPerPage={pokemonPerPage} allPokemon={allPokemon.length} paginated={paginated} />           
+            <Paginated  currentPage={currentPage} pokemonPerPage={pokemonPerPage} allPokemon={allPokemon.length} paginated={paginated} />           
         </div>
     )
 };

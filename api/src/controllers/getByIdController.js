@@ -7,7 +7,7 @@ const takePokemon = async id => {
 
     if(!pokemon.length){
         let {data} = await axios(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        const poke = [{
+        const poke = {
             id: data.id,
             name: data.name,
             image: data.sprites.other.home.front_default,
@@ -19,7 +19,7 @@ const takePokemon = async id => {
             weight: data.weight,
             types: data.types.map( type => type.type.name)
 
-        }]
+        }
         return poke
     }
     return pokemon

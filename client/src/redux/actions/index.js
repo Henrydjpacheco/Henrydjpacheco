@@ -9,6 +9,7 @@ export const FILTER_BY_DATA_UBICATION = 'FILTER_BY_DATA_UBICATION';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 export const SORT_BY_NAME = 'SORT_BY_NAME';
 export const SORT_BY_ATTACK = 'SORT_BY_ATTACK';
+export const CLEAR = 'CLEAR';
 
 export const getAllPokemon = () => async dispatch => {
     const {data} = await axios.get('/pokemon');
@@ -20,10 +21,8 @@ export const getAllPokemon = () => async dispatch => {
 export const getDetail = id => async dispatch => {
     const {data} = await axios.get(`/pokemon/${id}`)
     return dispatch({
-        
         type:'GET_DETAIL',
         payload: data
-
     });
 };
 export const getByName = name => async dispatch => {
@@ -35,7 +34,7 @@ export const getByName = name => async dispatch => {
         });
     }
     catch(err){
-        console.log(err);
+        alert("The Pokemon dont exist in the database");
     }
 };
 export const getTypes = () => async dispatch => {
@@ -79,5 +78,10 @@ export const sortByAttack = payload => {
         type: 'SORT_BY_ATTACK',
         payload
     };
-
+};
+export const clearDetail = payload => {
+    return {
+        type: 'CLEAR',
+        payload
+    };
 };

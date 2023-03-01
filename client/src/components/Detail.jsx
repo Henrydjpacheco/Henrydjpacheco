@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import Loading from './Loading.jsx';
-import { getDetail } from '../redux/actions';
+import { getDetail, clearDetail } from '../redux/actions';
 
 import style from '../styles/Detail.module.css';
 
@@ -14,6 +14,7 @@ const Detail = ( ) => {
     const {id} = useParams();
     useEffect(() => {
         dispatch(getDetail(id));
+        return () => dispatch(clearDetail())
     }, [dispatch, id]);
 
     let detail = useSelector(state => state.detail);

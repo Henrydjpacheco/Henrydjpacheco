@@ -4,14 +4,16 @@ import { useDispatch } from 'react-redux';
 import { filterByType, filterByLocation } from '../redux/actions';
 import style from '../styles/Filter.module.css'
 
-const FilterBy = () => {
+const FilterBy = ({setCurrentPage}) => {
     
     const dispatch = useDispatch();
     const handleFilterTypes = (e) =>{
-        dispatch(filterByType(e.target.value))
+        dispatch(filterByType(e.target.value));
+        dispatch(setCurrentPage(1));
     };
     const handleFilterLocation = (e) => {
         dispatch(filterByLocation(e.target.value));
+        dispatch(setCurrentPage(1));
     };
     return(
         <div className={style.container}>

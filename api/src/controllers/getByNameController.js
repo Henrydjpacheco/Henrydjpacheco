@@ -14,7 +14,7 @@ const findByName = async name => {
     });
         if(pokemon) return pokemon;
         const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
-            const poke = [{
+            const poke = {
                 id: data.id,
                 name: data.name,
                 image: data.sprites.other.home.front_default,
@@ -25,18 +25,12 @@ const findByName = async name => {
                 height: data.height,
                 weight: data.weight,
                 types: data.types.map( type => type.type.name)
-    
-            }]
+            }
             return poke
     }
     catch (err) {
     
-            
-            
-        
-        
-            throw("The searched pokemon does not exist, verify that it is spelled correctly, in the search bar")
-          
+        throw("The searched pokemon does not exist, verify that it is spelled correctly, in the search bar");
     }
 
     
