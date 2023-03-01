@@ -13,21 +13,20 @@ const findByName = async name => {
             }
         });
         const pokeDb = {
-            
-            id: poke.id,
-            name: poke.name,
-            image: poke.image,
-            health: poke.health,
-            defense: poke.defense,
-            attack: poke.attack,
-            speed: poke.speed,
-            height: poke.height,
-            weight: poke.weight,
-            types: poke.Types.map( type => type.name),
-            CreatedInDb: poke.createdInDb
+            id: pokemon.id,
+            name: pokemon.name,
+            image: pokemon.image,
+            health: pokemon.health,
+            defense: pokemon.defense,
+            attack: pokemon.attack,
+            speed: pokemon.speed,
+            height: pokemon.height,
+            weight: pokemon.weight,
+            types: pokemon.Types.map( type => type.name),
+            CreatedInDb: pokemon.createdInDb
         }
-        return pokeDb
-        if(pokemon) return pokemon;
+        
+        if(pokemon) return pokeDb;
             const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const poke = {
                 id: data.id,
