@@ -7,7 +7,7 @@ import Loading from './Loading.jsx';
 import { getDetail } from '../redux/actions';
 
 import style from '../styles/Detail.module.css';
-import Nav from './Nav.jsx'
+
 
 const Detail = ( ) => {
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Detail = ( ) => {
             !detail[0] ?  <Loading/> :  
             <div className={style.container}>
                 <div className={style.photo}>
-                    <img src={detail[0]?.image} alt="image doesn't work"/>
+                    <img src={detail[0]?.image} alt='no fund'/>
                 </div>
                 <div className={style.skills}>
                     <h1>{detail[0]?.name}</h1>

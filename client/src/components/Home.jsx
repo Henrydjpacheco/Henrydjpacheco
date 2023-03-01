@@ -17,7 +17,7 @@ const Home = () => {
     const [reload, setReload] = useState('')
     const dispatch = useDispatch();
     const [ currentPage, setCurrentPage ] = useState(1);
-    const [ pokemonPerPage, setPokemonPerPage ] = useState(12);
+    const [ pokemonPerPage ] = useState(12);
     const paginated = (pageNumber) => { setCurrentPage(pageNumber)};
     const indexOfLastPokemon = currentPage * pokemonPerPage
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
