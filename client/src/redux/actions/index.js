@@ -11,14 +11,14 @@ export const SORT_BY_NAME = 'SORT_BY_NAME';
 export const SORT_BY_ATTACK = 'SORT_BY_ATTACK';
 
 export const getAllPokemon = () => async dispatch => {
-    const {data} = await axios.get('https://pokedex-app-production-052b.up.railway.app/pokemon');
+    const {data} = await axios.get('/pokemon');
     return dispatch({
         type: 'GET_ALL_POKEMON',
         payload: data
     });
 };
 export const getDetail = id => async dispatch => {
-    const {data} = await axios.get(`https://pokedex-app-production-052b.up.railway.app/pokemon/${id}`)
+    const {data} = await axios.get(`/pokemon/${id}`)
     return dispatch({
         
         type:'GET_DETAIL',
@@ -28,7 +28,7 @@ export const getDetail = id => async dispatch => {
 };
 export const getByName = name => async dispatch => {
     try {
-        const {data} = await axios(`https://pokedex-app-production-052b.up.railway.app/pokemon?name=${name}`);
+        const {data} = await axios(`/pokemon?name=${name}`);
         return dispatch({
             type: 'GET_BY_NAME',
             payload: data
@@ -39,7 +39,7 @@ export const getByName = name => async dispatch => {
     }
 };
 export const getTypes = () => async dispatch => {
-    let { data } = await axios('https://pokedex-app-production-052b.up.railway.app/types');
+    let { data } = await axios('/types');
         return dispatch({
             type: 'GET_TYPES',
             payload: data
@@ -47,7 +47,7 @@ export const getTypes = () => async dispatch => {
     )
 };
 export const postPokemon = body => async dispatch => {
-    const { data } = await axios.post('https://pokedex-app-production-052b.up.railway.app/pokemon', body)
+    const { data } = await axios.post('/pokemon', body)
     return dispatch({
         type: 'POST_POKEMON',
         payload: data
