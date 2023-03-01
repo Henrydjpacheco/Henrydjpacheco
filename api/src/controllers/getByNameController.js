@@ -11,8 +11,22 @@ const findByName = async name => {
                 attributes: ['name'],
                 through:{attributes:[]}
             }
-
         });
+        const pokeDb = {
+            
+            id: poke.id,
+            name: poke.name,
+            image: poke.image,
+            health: poke.health,
+            defense: poke.defense,
+            attack: poke.attack,
+            speed: poke.speed,
+            height: poke.height,
+            weight: poke.weight,
+            types: poke.Types.map( type => type.name),
+            CreatedInDb: poke.createdInDb
+        }
+        return pokeDb
         if(pokemon) return pokemon;
             const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const poke = {
