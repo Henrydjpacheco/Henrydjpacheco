@@ -15,7 +15,7 @@ const Create = () => {
   const [input, setInput] = useState(
     {
       name: '',
-      image: '',
+      image: 'https://roastbrief.com.mx/wp-content/uploads/2021/01/BoBJLUKIMAAQgyA.png',
       health: 0,
       defense: 0,
       attack:0,

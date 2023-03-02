@@ -17,11 +17,13 @@ const Home = () => {
     const [reload, setReload] = useState('')
     const dispatch = useDispatch();
     const [ currentPage, setCurrentPage ] = useState(1);
-    const [ pokemonPerPage ] = useState(12);
-    const paginated = (pageNumber) => { setCurrentPage(pageNumber)};
-    const indexOfLastPokemon = currentPage * pokemonPerPage
+    const [ pokemonPerPage] = useState(12);
+    const indexOfLastPokemon = currentPage * pokemonPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
     const currentPokemon = allPokemon?.slice(indexOfFirstPokemon, indexOfLastPokemon);
+    const paginated = pageNumber => { 
+        setCurrentPage(pageNumber)
+    };
 
     const handleClick = event =>{
         event.preventDefault();
