@@ -44,7 +44,7 @@ let listDbPokemon = async () => {
     dbPokemon = dbPokemon.map(poke  => {
         const pokemon = {
             id: poke.id,
-            name: poke.name.charAt(0).toUpperCase(),
+            name: poke.name,
             image: poke.image,
             health: poke.health,
             defense: poke.defense,
