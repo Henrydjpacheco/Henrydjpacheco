@@ -30,7 +30,7 @@ export const getByName = name => async dispatch => {
         const {data} = await axios(`/pokemon?name=${name}`);
         return dispatch({
             type: 'GET_BY_NAME',
-            payload: data
+            payload: [data]
         });
     }
     catch(err){

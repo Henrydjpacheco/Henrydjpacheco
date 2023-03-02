@@ -53,7 +53,7 @@ let listDbPokemon = async () => {
             height: poke.height,
             weight: poke.weight,
             types: poke.Types.map( type => type.name),
-            CreatedInDb: poke.createdInDb
+            createdInDb: poke.createdInDb
             
         }
         return pokemon 

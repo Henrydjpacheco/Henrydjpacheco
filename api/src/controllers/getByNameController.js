@@ -11,23 +11,24 @@ const findByName = async name => {
                 attributes: ['name'],
                 through:{attributes:[]}
             }
-        });
-        const pokeDb = {
-            id: pokemon.id,
-            name: pokemon.name,
-            image: pokemon.image,
-            health: pokemon.health,
-            defense: pokemon.defense,
-            attack: pokemon.attack,
-            speed: pokemon.speed,
-            height: pokemon.height,
-            weight: pokemon.weight,
-            types: pokemon.Types.map( type => type.name),
-            CreatedInDb: pokemon.createdInDb
-        }
-        
-        if(pokeDb) return pokeDb;
-            const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    });
+        if(pokemon)  {
+        let newPokemon = {
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.image,
+                health: pokemon.health,
+                defense: pokemon.defense,
+                attack: pokemon.attack,
+                speed: pokemon.speed,
+                height: pokemon.height,
+                weight: pokemon.weight,
+                types: pokemon.Types.map( type => type.name),
+                creaatedInDb: pokemon.creaatedInDb
+            };
+            return newPokemon;
+        };
+        const { data } = await axios(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const poke = {
                 id: data.id,
                 name: data.name,
@@ -43,8 +44,7 @@ const findByName = async name => {
             return poke
     }
     catch (err) {
-    
-        throw("The searched pokemon does not exist, verify that it is spelled correctly, in the search bar");
+            throw("The searched pokemon does not exist, verify that it is spelled correctly, in the search bar");  
     }
 
     
