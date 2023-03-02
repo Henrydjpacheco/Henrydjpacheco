@@ -58,10 +58,8 @@ header{
     
     .cards{
         display: grid;
-        grid-template-columns: 17.5% 17.5% 17.5% 17.5% 17.5% 17.5% ;
-        margin-left: 69px;
+        grid-template-columns: 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667% 16.6666666667% ;
         justify-content: center;    
-    
     }
     .contNav{
         display: flex;

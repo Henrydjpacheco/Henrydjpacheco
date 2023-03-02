@@ -6,18 +6,19 @@
     font-family: 'Bahnschrift', sans-serif;
     margin:0;   
 }
-.description p{
-    color: #ffde00;
+.description h5{
+    color: #181818;
     display:flex;
     flex-flow: row wrap;
-    font-size: 22px;
+    
     text-justify: inter-cluster;
     margin-bottom: 0;
 }
-.description h6{
-    color: #3b4cca;
+.description p{
+    color: #ffde00;
     text-shadow: 0px 0px 15px #0000;
     text-align: start;
+    font-size: 22px;
     margin: 0;
 }
 .to{
@@ -31,11 +32,11 @@ a{
 }
 .banner {
     
-    width: 100px;
-    height:  100px;
+    width: 99px;
+    height:  99px;
     filter: drop-shadow(0px 4px 9px #FFFFFF);
 
 }
 .banner:hover{
-    transform: scale(1.3);
+    transform: scale(1.5s);
 }

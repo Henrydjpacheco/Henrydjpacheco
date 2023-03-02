@@ -18,12 +18,11 @@ const SearchBar = ({setCurrentPage}) =>{
         event.preventDefault();
         if (name.length !== 0) {
             dispatch(getByName(name));
+            setName('');
             dispatch(setCurrentPage(1));
-            
         } else {
             alert("You must enter the exact name of the pokemon");
-            setName('');
-            dispatch(getAllPokemon())
+            
             
         }
     };

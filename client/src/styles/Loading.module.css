@@ -3,7 +3,7 @@
 }
 @media (prefers-reduced-motion: no-preference) {
     .loading {
-        animation: App-logo-spin infinite 3s linear;
+        animation: App-logo-spin infinite 1s linear;
     }
 }
 @keyframes App-logo-spin {

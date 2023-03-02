@@ -69,11 +69,11 @@ const Create = () => {
     if( !input.name.trim() && !input.image && input.health === 0 && input.attack === 0  && input.defense === 0 && !input.types[0]) {
       setErrors("Please, complete the fields , for the creation of the pokemon");
     }
-    else if (!input.name.trim() && !RegExp('^[a-zA-Z ]{3,30}$'.test(input.name))){
+    else if (!input.name.trim() && !RegExp('^[a-z]{3,30}$'.test(input.name))){
       setErrors("Please, enter a name for your pokemon, remember that it can only contain letters, and it can only contain 30 characters");
     }
-    else if(!input.image){
-      setErrors("Please, enter the url of the image of your pokemon");
+    else if(!input.image && !RegExp('^(http|https)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(/\\S*)?$'.test(input.image))){
+      setErrors("Please, paste a url of a photo of your pokemon");
     }
     else if(input.health === 0){
       setErrors("Please, select a value other than 0 for your pokemon's health");

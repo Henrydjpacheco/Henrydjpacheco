@@ -11,8 +11,8 @@ export const Card = ({id, name, image, types}) => {
                 </Link>
             </div>
             <div className={style.description}>
-                <p>{name}</p>
-                <h6>{types.join(', ')}</h6>
+                <h5>{name}</h5>
+                <p>{types.join(', ')}</p>
             </div>
         </div>
     )
