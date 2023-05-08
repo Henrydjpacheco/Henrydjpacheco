@@ -34,7 +34,7 @@ avance
 
 <h3 align="left">Conéctese conmigo:</h3>
 <p align ="izquierda">
-<a href="https://www.linkedin.com/in/henrydjpacheco/" target="blank"><img align="center" src=" https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com /in/henrydjpacheco/" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/henrydjpacheco/" target="blank"><img align="center" src=" https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="henrydjpacheco" height="30" width="40" /></a>
 <a href="https://instagram.com/henrydjpacheco" target="blank"><img align ="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="henrydjpacheco" height="30 " ancho="40" /></a>
 <a href="https:/discord.gg/Aurelio Baldor#9829 target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme- generador/maestro/src/images/icons/Social/discord.svg" alt="#9829" height="30" width="40" /></a> </p> <h3 align="left
 "
