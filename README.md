@@ -6,7 +6,7 @@ I am a Full Stack developer with expertise in both back-end and front-end develo
 Currently, my focus is on undertaking projects that enhance my programming skills and knowledge. I am passionate about this field and aspire to continue learning and growing in it.</h3>
 
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=henrydjpacheco" alt="henrydjpacheco" /></a> </p>
+
 
 <p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
@@ -30,3 +30,4 @@ Currently, my focus is on undertaking projects that enhance my programming skill
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=henrydjpacheco&show_icons=true&locale=en" alt="henrydjpacheco" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=henrydjpacheco&" alt="henrydjpacheco" /></p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=henrydjpacheco" alt="henrydjpacheco" /></a> </p>
