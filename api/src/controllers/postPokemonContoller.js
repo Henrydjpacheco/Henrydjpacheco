@@ -17,7 +17,7 @@ const addPokemon = async (name, image, health, defense, attack, speed, height, w
             throw new Error("Please select one or more types of the new pokemon.");
         default:
             break;
-        }
+        };
     try{
         const createdPokemon = await Pokemon.create({name, image, health, defense, attack, speed, height, weight, types});
 
@@ -33,3 +33,10 @@ const addPokemon = async (name, image, health, defense, attack, speed, height, w
 }; 
 
 module.exports = { addPokemon };
+
+
+
+
+//   ----------- publicaciones 1  tiene muchos m comentarios (pertenece) 
+//Publicaciones.hasMany(Comment , )
+//comment.belongsto(Publication, )

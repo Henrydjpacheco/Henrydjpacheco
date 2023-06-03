@@ -1,16 +1,19 @@
 .cont{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
 }
+
 .cont img{
-    margin-top: 81px;
-    width: 690px;
-    height: 455px;
-    align-items: center;
-    border: 33px solid #cc0000;
-    border-radius: 15px ;
+    display: flex;
+    justify-content: center;
+        margin-top: 10vw;
+        width: 62vw;
+        height: 27vw;
+        border: .6vw solid #a30000; 
+        border-radius: 6vw 6vw 6vw 6vw / 1.5vw 1.5vw 1.5vw 1.5vw;  
 }
 
 .init{

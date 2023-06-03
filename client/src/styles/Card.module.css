@@ -1,5 +1,5 @@
 .card{
-    padding: 30px;
+    padding: 1vw;
     
 }
 .description{
@@ -7,36 +7,58 @@
     margin:0;   
 }
 .description h5{
+    font-family: 'Shantell Sans', cursive;
     color: #181818;
     display:flex;
     flex-flow: row wrap;
-    
     text-justify: inter-cluster;
     margin-bottom: 0;
 }
+.description h5::first-letter {
+  text-transform: uppercase;
+}
 .description p{
-    color: #ffde00;
+    font-family: 'Comic Neue', cursive;
+    color: #232323;
     text-shadow: 0px 0px 15px #0000;
     text-align: start;
-    font-size: 22px;
+    font-size: 1vw;
     margin: 0;
 }
 .to{
     text-decoration: none;
 }
 a{
-
     text-decoration: none;
-    font-size:27px;
+    font-size:1.6vw;
    /*  text-shadow: 0px 0px 18px #000000; */
 }
+
 .banner {
     
-    width: 99px;
-    height:  99px;
-    filter: drop-shadow(0px 4px 9px #FFFFFF);
+    width: 8vw;
+    height: 6.6vw;
+    filter: drop-shadow(0px 1px 3px #181818);
+    animation: bounce .8s infinite;
+}
 
-}
-.banner:hover{
-    transform: scale(1.5s);
-}
+@keyframes bounce {
+    from {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes translate {
+    from {
+      top: 0;
+    }
+    to {
+      top: 10%;
+    }
+  }

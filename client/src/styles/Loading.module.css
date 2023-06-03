@@ -1,5 +1,5 @@
 .loading{
-    height: 66vmin;
+    height: 15vw;
 }
 @media (prefers-reduced-motion: no-preference) {
     .loading {

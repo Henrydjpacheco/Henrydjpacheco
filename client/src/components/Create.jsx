@@ -1,13 +1,13 @@
 import React, { useEffect, useState} from 'react';
 import { Link, useHistory} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTypes, postPokemon } from '../redux/actions';
+import { getAllPokemon, getTypes, postPokemon } from '../redux/actions';
 import style from '../styles/Create.module.css';
 
 
 
 const Create = () => {
-
+  const pokemon = useSelector(state => state.pokemon)
   const dispatch = useDispatch()
   const [errors, setErrors] = useState("");
   const types = useSelector(state => state.types);   
@@ -15,7 +15,7 @@ const Create = () => {
   const [input, setInput] = useState(
     {
       name: '',
-      image: 'https://roastbrief.com.mx/wp-content/uploads/2021/01/BoBJLUKIMAAQgyA.png',
+      image: '',
       health: 0,
       defense: 0,
       attack:0,
@@ -29,8 +29,9 @@ const Create = () => {
   useEffect(() => {
     if (types.length === 0) {
         dispatch(getTypes())
+        dispatch(getAllPokemon())
     }
-  }, [dispatch,types]
+  }, [dispatch, types, pokemon]
   );
   const handleInputChange = e => {
     e.preventDefault();
@@ -63,28 +64,35 @@ const Create = () => {
     });
   };
 
-      
   const handleSubmit = async e => {
     e.preventDefault();
     if( !input.name.trim() && !input.image && input.health === 0 && input.attack === 0  && input.defense === 0 && !input.types[0]) {
       setErrors("Please, complete the fields , for the creation of the pokemon");
     }
-    else if (!input.name.trim() && !RegExp('^[a-z]{3,30}$'.test(input.name))){
-      setErrors("Please, enter a name for your pokemon, remember that it can only contain letters, and it can only contain 30 characters");
+    else if (!input.name.trim() ){
+      setErrors("Please, enter a name for your pokemon");
     }
-    else if(!input.image && !RegExp('^(http|https)://[a-zA-Z0-9-.]+.[a-zA-Z]{2,3}(/\\S*)?$'.test(input.image))){
-      setErrors("Please, paste a url of a photo of your pokemon");
+    else if ( !pokemon.includes(input.name)){
+      setErrors("This name is not available"); 
     }
+    else if(!/^[a-zA-z]+$/.test(input.name)){
+      setErrors("Please,only alphabet characters ")
+    }
+    else if(!input.image){
+      setErrors("Please, enter the url of the image of your pokemon");
+    }
+  
     else if(input.health === 0){
       setErrors("Please, select a value other than 0 for your pokemon's health");
     }
+
     else if (input.attack === 0){
       setErrors("Please, select a value other than 0 for your pokemon's attack");
     }
     else if (input.defense === 0){
       setErrors("Please, select a value other than 0 for your pokemon's defense");
     }
-    else if (!input.types[0]){
+    else if (input.types.length === 0){
       setErrors("Please select at least one type for your pokemon")
     }
     else{
@@ -158,7 +166,6 @@ const Create = () => {
                       }
                     </select>
                   </div>
-  
                   <div className={style.renderTypes}>
                     {
                       input.types.map(type =>{

@@ -1,52 +1,49 @@
-import { useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector} from 'react-redux';
 
-import SearchBar from './SearchBar';
+import Paginated from '../pages/Paginated.jsx';
+import { getAllPokemon, getTypes, sortByAttack, sortByName } from '../redux/actions';
+import style from '../styles/Home.module.css';
 import Card from './Card';
-import Nav from './Nav';
-import Loading from './Loading';
 import FilterBy from './FilterBy.jsx';
-
-import style from '../styles/Home.module.css'
-import Paginated from '../pages/Paginated.jsx'
-import { getAllPokemon, getTypes, sortByName, sortByAttack } from '../redux/actions'
+import Loading from './Loading';
+import SearchBar from './SearchBar';
 
 const Home = () => {    
-    const allPokemon = useSelector(state => state.pokemon);
-    const [reload, setReload] = useState('')
+
     const dispatch = useDispatch();
+    const allPokemon = useSelector(state => state.pokemon);
+    const [reload, setReload] = useState('');
     const [ currentPage, setCurrentPage ] = useState(1);
-    const [ pokemonPerPage] = useState(12);
+    const [ pokemonPerPage ] = useState(12);
     const indexOfLastPokemon = currentPage * pokemonPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonPerPage;
     const currentPokemon = allPokemon?.slice(indexOfFirstPokemon, indexOfLastPokemon);
+
     const paginated = pageNumber => { 
         setCurrentPage(pageNumber)
-    };
-
-    const handleClick = event =>{
-        event.preventDefault();
-        dispatch(getAllPokemon(),
-        getTypes())
     };
     const refresh = (flag) => {
         setReload(flag)
         return reload;
+    };
+    const handleClick = event =>{
+        event.preventDefault();
+        dispatch(getAllPokemon(),
+        getTypes())
     };
     const handleSortName = (e) =>{
         e.preventDefault();
         dispatch(sortByName(e.target.value));
         setCurrentPage(1);
         refresh(e.target.value);
-    }
+    };
     const handleSortAttack = (e) =>{
         e.preventDefault();
         dispatch(sortByAttack(e.target.value));         
         setCurrentPage(1);
-        refresh(e.target.value);
-        
-        
+        refresh(e.target.value);    
     };
     useEffect(() => {   
         dispatch(getAllPokemon());
@@ -56,11 +53,22 @@ const Home = () => {
     return(
         <div className={style.container}>
             <header>
+            <Link to={'/home'}>
             <h1>Pokedex<br/></h1>
+            </Link>
+            
             <div className={style.top}>
                 <div className={style.search}>
-                <SearchBar setCurrentPage={setCurrentPage}/> 
-                <Nav handleClick={handleClick}/> 
+                    <SearchBar setCurrentPage={setCurrentPage}/>  
+                    <div className={style.btn}>
+                    <Link to={'/create'}>
+                        <button>ADD POKEMON +</button>
+                    </Link>
+                    
+                    <Link to={'/home'}>
+                        <button onClick={handleClick}>Home</button>
+                    </Link>
+                </div>
             </div>       
             <div className={style.contNav}>
                 <div className={style.order}>
@@ -85,7 +93,7 @@ const Home = () => {
             </header>            
             <div className = {style.cards} >
                 {
-                    !allPokemon[0] ?  <Loading/> :  currentPokemon?.map(poke => (
+                    !allPokemon[0] ?  <Loading /> :  currentPokemon?.map(poke => (
                             <Link to={'/home/'+poke.id} key={poke.id} id={poke.id} >
                                 <Card image={poke.image} name={poke.name} id={poke.id} types={poke.types} />
                             </Link> 

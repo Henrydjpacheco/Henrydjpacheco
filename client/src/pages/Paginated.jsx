@@ -15,7 +15,7 @@ const Paginated = ({pokemonPerPage, allPokemon, paginated, currentPage}) =>{
             <ul className={style.paginated}>
                 {pageNumber && pageNumber.map( num =>(
                     <li  className={ num === currentPage ?  style.focus : style.number } key={num}>
-                        <a key={num}onClick={() => paginated(num)} >{num}</a>
+                        <button  key={num} onClick={() => paginated(num)} >{num}</button>
                     </li>
                 ))}
             </ul>

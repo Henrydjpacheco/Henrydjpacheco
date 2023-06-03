@@ -1,10 +1,10 @@
-import {React, useEffect} from 'react';
+import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
+import { clearDetail, getDetail } from '../redux/actions';
 import Loading from './Loading.jsx';
-import { getDetail, clearDetail } from '../redux/actions';
 
 import style from '../styles/Detail.module.css';
 
@@ -18,9 +18,10 @@ const Detail = ( ) => {
     }, [dispatch, id]);
 
     let detail = useSelector(state => state.detail);
-    return(
+    return(<div>
+        <Link to="/home"> <button>◀Back</button> </Link>
         <div className={style.wra}>
-            <Link to="/home"> <button>◀Back</button> </Link>
+            
             {
             !detail[0] ?  <Loading/> :  
             <div className={style.container}>
@@ -29,6 +30,8 @@ const Detail = ( ) => {
                 </div>
                 <div className={style.skills}>
                     <h1>{detail[0]?.name}</h1>
+                    <br/>
+                    <div className={style.stats}>
                     <div className={style.health}>
                         <h4>Health:  {detail[0]?.health}/{detail[0]?.health}</h4>
                     </div>
@@ -41,15 +44,21 @@ const Detail = ( ) => {
                     <div className={style.speed}>
                         <h4>Speed: {detail[0]?.speed}</h4>
                     </div>
+                    </div>
+                    <div className={style.others}>
                     <h4>Height: {detail[0]?.height}m</h4>
                     <h4>Weigth: {detail[0]?.weight}Kg.</h4>
                         <div className={style.types}>
                             <h4>Types: {detail[0]?.types.join(', ')}.</h4>
                         </div>
+                    </div>
+                    
                     
                 </div>  
             </div>
             }
+        </div>
+        
         </div>
     );
 }

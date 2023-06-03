@@ -1,7 +1,7 @@
 import {React, useState }from "react";
 
 import { useDispatch } from "react-redux";
-import { getByName, getAllPokemon} from "../redux/actions";
+import { getByName } from "../redux/actions";
 import style from '../styles/SearchBar.module.css'
 
 const SearchBar = ({setCurrentPage}) =>{
@@ -11,8 +11,6 @@ const SearchBar = ({setCurrentPage}) =>{
     const handleInputChange = (event) => {
         event.preventDefault();
         setName(event.target.value);
-        
-        
     };
     const handleSubmit = event =>{
         event.preventDefault();
@@ -21,9 +19,7 @@ const SearchBar = ({setCurrentPage}) =>{
             setName('');
             dispatch(setCurrentPage(1));
         } else {
-            alert("You must enter the exact name of the pokemon");
-            
-            
+            alert("You must enter the exact name of the pokemon");  
         }
     };
 
