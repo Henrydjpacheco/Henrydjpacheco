@@ -91,14 +91,15 @@ const Home = () => {
             </div>        
             </div>   
             </header>            
-            <div className = {style.cards} >
+            <div className = {style.cardContainer} >
                 {
-                    !allPokemon[0] ?  <Loading /> :  currentPokemon?.map(poke => (
+                    !allPokemon[0] ?  <Loading /> : <div className = {style.cards}> {currentPokemon?.map(poke => (
                             <Link to={'/home/'+poke.id} key={poke.id} id={poke.id} >
                                 <Card image={poke.image} name={poke.name} id={poke.id} types={poke.types} />
                             </Link> 
                         )
                     )
+                    }</div>
                 }
             </div>
             <Paginated  currentPage={currentPage} pokemonPerPage={pokemonPerPage} allPokemon={allPokemon.length} paginated={paginated} />           

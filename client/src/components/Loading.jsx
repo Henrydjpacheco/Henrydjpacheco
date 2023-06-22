@@ -1,10 +1,10 @@
 import React from 'react';
+import loading from '../img/pokeball.png';
 import style from '../styles/Loading.module.css';
-import  loading from '../img/pokeball.png'
 
 const Loading = () => {
     return( 
-        <div >
+        <div className={style.contLoading}>
             <img  className={style.loading}  src={loading} alt='loading...'></img>
         </div>
     );

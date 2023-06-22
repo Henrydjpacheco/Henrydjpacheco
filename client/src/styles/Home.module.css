@@ -43,6 +43,7 @@ header{
     display: flex;
     align-items: center;
     height: 9vw;
+    margin-top: 3vw ;
 
 }
 header .order{
@@ -86,7 +87,17 @@ h1{
         justify-content: space-be;
     
     }
-    
+    .cardContainer{
+        background: linear-gradient(137.98deg, #FFFFFF 13.38%, #E9E0FF 29.09%, #CFCCFA 61.72%, #C7E0FF 82.21%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3.3vw;
+        width: 69vw;
+        height: 28vw;
+        border: .6vw solid #a30000; 
+        border-radius: 6vw 6vw 6vw 6vw / 1.5vw 1.5vw 1.5vw 1.5vw; 
+    }
     .cards{
         
         background: linear-gradient(137.98deg, #FFFFFF 13.38%, #E9E0FF 29.09%, #CFCCFA 61.72%, #C7E0FF 82.21%);

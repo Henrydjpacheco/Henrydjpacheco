@@ -1,5 +1,12 @@
+.contLoading{
+display: flex;
+position: absolute;
+
+}
 .loading{
-    height: 15vw;
+height: 15vw;
+width: 15vw;
+z-index: 3;
 }
 @media (prefers-reduced-motion: no-preference) {
     .loading {
