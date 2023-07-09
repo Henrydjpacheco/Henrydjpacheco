@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Henry Pacheco</h1>
-<h3 align="center">A passionate full stack web developer from Colombia</h3>
+<h3 align="center">a enthusiast full stack web developer from Colombia</h3>
 <h3>
 I am a Full Stack developer with expertise in both back-end and front-end development tools. I have worked on solo projects using technologies such as JavaScript, React, Redux, Node.js, Express, and PostgreSQL. Additionally, I have participated in group projects where we utilized methodologies such as Scrum and tools like Git, which were critical to the development of each project.
 Currently, my focus is on undertaking projects that enhance my programming skills and knowledge. I am passionate about this field and aspire to continue learning and growing in it.</h3>
