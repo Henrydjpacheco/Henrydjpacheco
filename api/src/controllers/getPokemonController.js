@@ -20,7 +20,7 @@ const getPokeData = async url => {
 
 
 const listApiPokemon = async () => {
-    let {data} = await axios('https://pokeapi.co/api/v2/pokemon?limit=151');
+    let {data} = await axios('https://pokeapi.co/api/v2/pokemon?limit=51');
     let listPokemon = data.results
     const pokemon = await Promise.all(listPokemon.map(async pokeData => {
         const url = pokeData.url;
